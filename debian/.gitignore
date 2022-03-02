@@ -1,0 +1,7 @@
+*.substvars
+*debhelper*
+.debhelper
+files
+libslirp-dev
+libslirp0
+tmp
