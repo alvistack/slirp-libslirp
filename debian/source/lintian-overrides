@@ -1,0 +1,3 @@
+libslirp source: no-debian-changes
+libslirp source: not-binnmuable-any-depends-any
+libslirp source: weak-library-dev-dependency
