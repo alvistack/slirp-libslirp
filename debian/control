@@ -1,0 +1,42 @@
+Source: libslirp
+Section: net
+Priority: optional
+Standards-Version: 4.5.0
+Maintainer: Wong Hoi Sing Edison <hswong3i@gmail.com>
+Homepage: https://gitlab.freedesktop.org/slirp/libslirp/-/tags
+Vcs-Browser: https://github.com/alvistack/slirp-libslirp
+Vcs-Git: https://github.com/alvistack/slirp-libslirp.git
+Build-Depends:
+ debhelper,
+ debhelper-compat (= 10),
+ libglib2.0-dev,
+ meson,
+ ninja-build,
+ valgrind,
+
+Package: libslirp0
+Section: libs
+Architecture: amd64
+Description: General purpose TCP-IP emulator library
+ libslirp is a user-mode networking library used by virtual machines,
+ containers or various tools.
+ .
+ This package contains the library itself.
+Pre-Depends:
+ ${misc:Pre-Depends}
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends},
+
+Package: libslirp-dev
+Section: libdevel
+Architecture: amd64
+Description: General purpose TCP-IP emulator library (development files)
+ libslirp is a user-mode networking library used by virtual machines,
+ containers or various tools.
+ .
+ This package contains the header files and other files
+ needed to compile applications which uses libslirp.
+Depends: 
+ ${misc:Depends},
+ libslirp0 (= ${source:Version}),
